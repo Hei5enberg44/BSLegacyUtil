@@ -58,9 +58,6 @@ public abstract class Program {
         // CenterLog(contents.Replace("<br>", "\n"));
         // Space();
         // http.Dispose();
-        CenterLog("This project is considered deprecated and will no longer be updated. (End of life: 21 May 2023)\n" +
-                  "A new tool may eventually be in the works, but no promises on that.\n" +
-                  "If you would like to support the creator, please consider it: https://ko-fi.com/MintLily");
         
         var showError = !Directory.Exists($"{Vars.BaseDirectory}Resources") || !Directory.Exists($"{Vars.BaseDirectory}DepotDownloader");
         

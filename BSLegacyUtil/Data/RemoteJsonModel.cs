@@ -22,7 +22,7 @@ public class Version {
 }
 
 public abstract class RemoteJsonModel {
-    private const string JsonUrl = "https://raw.githubusercontent.com/RiskiVR/BSLegacyLauncher/master/Resources/BSVersions.json";
+    private const string JsonUrl = "https://raw.githubusercontent.com/Hei5enberg44/BSLegacyLauncher/master/Resources/BSVersions.json";
     private static readonly string JsonFile = $"{Vars.BaseDirectory}Versions.json";
 
     public static List<Version>? BsVersions { get; private set; }// = LoadJsonData(Vars.IsDebug ? JsonFile : JsonUrl);
@@ -40,7 +40,7 @@ public abstract class RemoteJsonModel {
                 /* The contents on this JSON will never be updated */
             }
             catch {
-                Error("Failed to load remote JSON data twice. Project is EOL.");
+                Error("Failed to load remote JSON data twice.");
             }
         }
         BsVersions = JsonConvert.DeserializeObject<List<Version>>(data);
